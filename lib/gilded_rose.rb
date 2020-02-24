@@ -10,6 +10,11 @@ class GildedRose
           if item.name != "Sulfuras, Hand of Ragnaros"
             item.quality = item.quality - 1
           end
+          if item.name == "Conjured"
+            if item.quality > 0
+              item.quality = item.quality - 1
+            end
+          end
         end
       else
         if item.quality < 50
@@ -37,6 +42,11 @@ class GildedRose
             if item.quality > 0
               if item.name != "Sulfuras, Hand of Ragnaros"
                 item.quality = item.quality - 1
+              end
+              if item.name == "Conjured"
+                if item.quality > 0
+                  item.quality = item.quality - 1
+                end
               end
             end
           else
